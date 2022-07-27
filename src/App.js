@@ -4,40 +4,69 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import AnimatedText from 'react-animated-text-content';
+import { Row ,Col} from 'react-bootstrap';
+
 function App() {
   return (
     <div className="App">
         <div className='Navbar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">John's Website</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <Nav.Link href="#features">About me</Nav.Link>
+            <Nav.Link href="#pricing">Resume</Nav.Link>
+            <NavDropdown title="Project" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Coustum Linux distro</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                React Project
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Some Project</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Some other Project
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-        </div>
+    &nbsp;
+    <Row>
+      <Col>
+        <img 
+          src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
+          alt="new"
+        />
+        &nbsp;
+        </Col>
+        <Col>
+        <AnimatedText
+  type="words" // animate words or chars
+  animation={{
+    x: '200px',
+    y: '-30px',
+    scale: 1.1,
+    ease: 'ease-in-out',
+  }}
+  animationType="float"
+  interval={0.06}
+  duration={0.8}
+  tag="p"
+  className="animated-paragraph"
+  includeWhiteSpaces
+  threshold={0.1}
+  rootMargin="30%"
+>
+  Content to animate
+</AnimatedText>
+
+</Col>
+      </Row>
+      </div >
     </div>
   );
 }
