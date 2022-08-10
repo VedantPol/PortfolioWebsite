@@ -7,13 +7,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import AnimatedText from 'react-animated-text-content';
 import { Row ,Col, Carousel} from 'react-bootstrap';
 import 'holderjs';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Contact from './Contact';
+import About from './About'
 
 function App() {
   return (
     
     <div className="App">
-
+        <Router>
         <div className='Navbar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -21,8 +28,8 @@ function App() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">About me</Nav.Link>
-            <Nav.Link href="#pricing">Resume</Nav.Link>
+            <Nav.Link as={Link} to="/about">About me</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Resume</Nav.Link>
             <NavDropdown title="Project" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Coustum Linux distro</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -38,6 +45,16 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </div >
+    <Routes>
+                        <Route path="/about" element={<About/>}>
+                        </Route>
+                        <Route path="/contact" element={<Contact/>}>
+                        </Route>
+                        
+                        </Routes>
+    </Router>
+
     &nbsp;
     <Row>
       <Col>
@@ -68,7 +85,6 @@ function App() {
 Designer, Frontend Developer & Mentor
 I design and code beautifully simple things, and I love what I do.
 </AnimatedText>
-
 </Col>
       </Row>
      
@@ -111,7 +127,7 @@ I design and code beautifully simple things, and I love what I do.
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-      </div >
+      
     </div>
   );
 }
