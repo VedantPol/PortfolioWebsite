@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import AnimatedText from 'react-animated-text-content';
-import { Row ,Col, Carousel} from 'react-bootstrap';
+import { Carousel} from 'react-bootstrap';
 import 'holderjs';
 import {
   BrowserRouter as Router,
@@ -19,12 +19,15 @@ import About from './About'
 function App() {
   return (
     
-    <div className="App">
+    <div className="App" style={{ 
+      backgroundImage: 'url(https://images-cdn.welcomesoftware.com/Zz0zZTliMjQ4MzhlNGExMWViYmJiMjFiZTI2ZWNmN2MzZA==)',
+      backgroundRepeat: 'repeat',
+    }}>
         <Router>
         <div className='Navbar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">John's Website</Navbar.Brand>
+        <Navbar.Brand href="#home">Jason's Website</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -55,20 +58,21 @@ function App() {
                         </Routes>
     </Router>
 
-    &nbsp;
-    <Row>
-      <Col>
-        <img 
-          src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
+    &nbsp;  
+    <div clasName="firstimg">    
+        <img className='mm'
+          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
           alt="new"
         />
+    </div>    
         &nbsp;
-        </Col>
-        <Col>
+        
+        
+  <div className='texty'>
         <AnimatedText
   type="words" // animate words or chars
   animation={{
-    x: '200px',
+    x: '150px',
     y: '-30px',
     scale: 1.1,
     ease: 'ease-in-out',
@@ -76,17 +80,19 @@ function App() {
   animationType="float"
   interval={0.06}
   duration={0.8}
-  tag="p"
+  tag="h2"
   className="animated-paragraph"
   includeWhiteSpaces
   threshold={0.1}
   rootMargin="30%"
 >
-Designer, Frontend Developer & Mentor
+Designer, Frontend Developer and Mentor
 I design and code beautifully simple things, and I love what I do.
 </AnimatedText>
-</Col>
-      </Row>
+</div>
+&nbsp;
+
+      
      
       <Carousel>
       <Carousel.Item>
