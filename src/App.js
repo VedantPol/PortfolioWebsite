@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import AnimatedText from 'react-animated-text-content';
-import { Row ,Col, Carousel} from 'react-bootstrap';
+import { Carousel} from 'react-bootstrap';
 import 'holderjs';
 import {
   BrowserRouter as Router,
@@ -24,7 +24,7 @@ function App() {
         <div className='Navbar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">John's Website</Navbar.Brand>
+        <Navbar.Brand href="#home">Cat's Website</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -55,20 +55,22 @@ function App() {
                         </Routes>
     </Router>
 
-    &nbsp;
-    <Row>
-      <Col>
+    &nbsp;  
+    <div clasName="firstimg">    
         <img 
           src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
           alt="new"
+          width="200" height="200"
         />
+    </div>    
         &nbsp;
-        </Col>
-        <Col>
+        
+        
+
         <AnimatedText
   type="words" // animate words or chars
   animation={{
-    x: '200px',
+    x: '150px',
     y: '-30px',
     scale: 1.1,
     ease: 'ease-in-out',
@@ -82,11 +84,12 @@ function App() {
   threshold={0.1}
   rootMargin="30%"
 >
-Designer, Frontend Developer & Mentor
+Designer, Frontend Developer and Mentor
 I design and code beautifully simple things, and I love what I do.
 </AnimatedText>
-</Col>
-      </Row>
+&nbsp;
+
+      
      
       <Carousel>
       <Carousel.Item>
