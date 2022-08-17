@@ -19,12 +19,15 @@ import About from './About'
 function App() {
   return (
     
-    <div className="App">
+    <div className="App" style={{ 
+      backgroundImage: 'url(https://images-cdn.welcomesoftware.com/Zz0zZTliMjQ4MzhlNGExMWViYmJiMjFiZTI2ZWNmN2MzZA==)',
+      backgroundRepeat: 'repeat',
+    }}>
         <Router>
         <div className='Navbar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Cat's Website</Navbar.Brand>
+        <Navbar.Brand href="#home">Jason's Website</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -57,16 +60,15 @@ function App() {
 
     &nbsp;  
     <div clasName="firstimg">    
-        <img 
-          src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
+        <img className='mm'
+          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
           alt="new"
-          width="200" height="200"
         />
     </div>    
         &nbsp;
         
         
-
+  <div className='texty'>
         <AnimatedText
   type="words" // animate words or chars
   animation={{
@@ -78,7 +80,7 @@ function App() {
   animationType="float"
   interval={0.06}
   duration={0.8}
-  tag="p"
+  tag="h2"
   className="animated-paragraph"
   includeWhiteSpaces
   threshold={0.1}
@@ -87,6 +89,7 @@ function App() {
 Designer, Frontend Developer and Mentor
 I design and code beautifully simple things, and I love what I do.
 </AnimatedText>
+</div>
 &nbsp;
 
       
