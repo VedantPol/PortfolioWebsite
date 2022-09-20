@@ -2,6 +2,7 @@ import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import MyImage from "../../src/images/logo.png";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
@@ -27,7 +28,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                {name}.
+              <img style={{width: '100px', height: '100px'}}
+        src={MyImage}
+        alt="car"
+      />
               </h1>
 
               <div className="flex items-center">
